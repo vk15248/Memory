@@ -132,19 +132,27 @@ namespace MemorijaUniversal.MemorijaUniversal_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "MemorijaUniversal.NumberPicker";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "String";
-            _typeNameTable[3] = "MemorijaUniversal.MainPage";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable = new string[9];
+            _typeNameTable[0] = "MemorijaUniversal.BoardPage";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "MemorijaUniversal.CardControl";
+            _typeNameTable[4] = "MemorijaUniversal.Card";
+            _typeNameTable[5] = "Object";
+            _typeNameTable[6] = "MemorijaUniversal.NumberPicker";
+            _typeNameTable[7] = "String";
+            _typeNameTable[8] = "MemorijaUniversal.MainPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::MemorijaUniversal.NumberPicker);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::System.String);
-            _typeTable[3] = typeof(global::MemorijaUniversal.MainPage);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable = new global::System.Type[9];
+            _typeTable[0] = typeof(global::MemorijaUniversal.BoardPage);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::MemorijaUniversal.CardControl);
+            _typeTable[4] = typeof(global::MemorijaUniversal.Card);
+            _typeTable[5] = typeof(global::System.Object);
+            _typeTable[6] = typeof(global::MemorijaUniversal.NumberPicker);
+            _typeTable[7] = typeof(global::System.String);
+            _typeTable[8] = typeof(global::MemorijaUniversal.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,8 +187,10 @@ namespace MemorijaUniversal.MemorijaUniversal_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_NumberPicker() { return new global::MemorijaUniversal.NumberPicker(); }
-        private object Activate_3_MainPage() { return new global::MemorijaUniversal.MainPage(); }
+        private object Activate_0_BoardPage() { return new global::MemorijaUniversal.BoardPage(); }
+        private object Activate_3_CardControl() { return new global::MemorijaUniversal.CardControl(); }
+        private object Activate_6_NumberPicker() { return new global::MemorijaUniversal.NumberPicker(); }
+        private object Activate_8_MainPage() { return new global::MemorijaUniversal.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -192,9 +202,43 @@ namespace MemorijaUniversal.MemorijaUniversal_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  MemorijaUniversal.NumberPicker
+            case 0:   //  MemorijaUniversal.BoardPage
+                userType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_BoardPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 1:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  MemorijaUniversal.CardControl
                 userType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_0_NumberPicker;
+                userType.Activator = Activate_3_CardControl;
+                userType.AddMemberName("CardValue");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  MemorijaUniversal.Card
+                userType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Object
+                xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  MemorijaUniversal.NumberPicker
+                userType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_6_NumberPicker;
                 userType.AddMemberName("MinValue");
                 userType.AddMemberName("MaxValue");
                 userType.AddMemberName("Step");
@@ -203,87 +247,89 @@ namespace MemorijaUniversal.MemorijaUniversal_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.UserControl
+            case 7:   //  String
                 xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  String
-                xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  MemorijaUniversal.MainPage
+            case 8:   //  MemorijaUniversal.MainPage
                 userType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_8_MainPage;
                 userType.AddMemberName("NumberOfPlayers");
                 userType.AddMemberName("NumberOfCards");
                 userType.SetIsLocalType();
                 xamlType = userType;
-                break;
-
-            case 4:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_NumberPicker_MinValue(object instance)
+        private object get_0_CardControl_CardValue(object instance)
+        {
+            var that = (global::MemorijaUniversal.CardControl)instance;
+            return that.CardValue;
+        }
+        private void set_0_CardControl_CardValue(object instance, object Value)
+        {
+            var that = (global::MemorijaUniversal.CardControl)instance;
+            that.CardValue = (global::MemorijaUniversal.Card)Value;
+        }
+        private object get_1_NumberPicker_MinValue(object instance)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             return that.MinValue;
         }
-        private void set_0_NumberPicker_MinValue(object instance, object Value)
+        private void set_1_NumberPicker_MinValue(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             that.MinValue = (global::System.String)Value;
         }
-        private object get_1_NumberPicker_MaxValue(object instance)
+        private object get_2_NumberPicker_MaxValue(object instance)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             return that.MaxValue;
         }
-        private void set_1_NumberPicker_MaxValue(object instance, object Value)
+        private void set_2_NumberPicker_MaxValue(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             that.MaxValue = (global::System.String)Value;
         }
-        private object get_2_NumberPicker_Step(object instance)
+        private object get_3_NumberPicker_Step(object instance)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             return that.Step;
         }
-        private void set_2_NumberPicker_Step(object instance, object Value)
+        private void set_3_NumberPicker_Step(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             that.Step = (global::System.String)Value;
         }
-        private object get_3_NumberPicker_CurrentValue(object instance)
+        private object get_4_NumberPicker_CurrentValue(object instance)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             return that.CurrentValue;
         }
-        private void set_3_NumberPicker_CurrentValue(object instance, object Value)
+        private void set_4_NumberPicker_CurrentValue(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.NumberPicker)instance;
             that.CurrentValue = (global::System.String)Value;
         }
-        private object get_4_MainPage_NumberOfPlayers(object instance)
+        private object get_5_MainPage_NumberOfPlayers(object instance)
         {
             var that = (global::MemorijaUniversal.MainPage)instance;
             return that.NumberOfPlayers;
         }
-        private void set_4_MainPage_NumberOfPlayers(object instance, object Value)
+        private void set_5_MainPage_NumberOfPlayers(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.MainPage)instance;
             that.NumberOfPlayers = (global::System.String)Value;
         }
-        private object get_5_MainPage_NumberOfCards(object instance)
+        private object get_6_MainPage_NumberOfCards(object instance)
         {
             var that = (global::MemorijaUniversal.MainPage)instance;
             return that.NumberOfCards;
         }
-        private void set_5_MainPage_NumberOfCards(object instance, object Value)
+        private void set_6_MainPage_NumberOfCards(object instance, object Value)
         {
             var that = (global::MemorijaUniversal.MainPage)instance;
             that.NumberOfCards = (global::System.String)Value;
@@ -296,45 +342,51 @@ namespace MemorijaUniversal.MemorijaUniversal_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "MemorijaUniversal.CardControl.CardValue":
+                userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.CardControl");
+                xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "CardValue", "MemorijaUniversal.Card");
+                xamlMember.Getter = get_0_CardControl_CardValue;
+                xamlMember.Setter = set_0_CardControl_CardValue;
+                break;
             case "MemorijaUniversal.NumberPicker.MinValue":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.NumberPicker");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "MinValue", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_NumberPicker_MinValue;
-                xamlMember.Setter = set_0_NumberPicker_MinValue;
+                xamlMember.Getter = get_1_NumberPicker_MinValue;
+                xamlMember.Setter = set_1_NumberPicker_MinValue;
                 break;
             case "MemorijaUniversal.NumberPicker.MaxValue":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.NumberPicker");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "MaxValue", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_NumberPicker_MaxValue;
-                xamlMember.Setter = set_1_NumberPicker_MaxValue;
+                xamlMember.Getter = get_2_NumberPicker_MaxValue;
+                xamlMember.Setter = set_2_NumberPicker_MaxValue;
                 break;
             case "MemorijaUniversal.NumberPicker.Step":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.NumberPicker");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "Step", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_NumberPicker_Step;
-                xamlMember.Setter = set_2_NumberPicker_Step;
+                xamlMember.Getter = get_3_NumberPicker_Step;
+                xamlMember.Setter = set_3_NumberPicker_Step;
                 break;
             case "MemorijaUniversal.NumberPicker.CurrentValue":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.NumberPicker");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "CurrentValue", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_NumberPicker_CurrentValue;
-                xamlMember.Setter = set_3_NumberPicker_CurrentValue;
+                xamlMember.Getter = get_4_NumberPicker_CurrentValue;
+                xamlMember.Setter = set_4_NumberPicker_CurrentValue;
                 break;
             case "MemorijaUniversal.MainPage.NumberOfPlayers":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.MainPage");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "NumberOfPlayers", "String");
-                xamlMember.Getter = get_4_MainPage_NumberOfPlayers;
-                xamlMember.Setter = set_4_MainPage_NumberOfPlayers;
+                xamlMember.Getter = get_5_MainPage_NumberOfPlayers;
+                xamlMember.Setter = set_5_MainPage_NumberOfPlayers;
                 break;
             case "MemorijaUniversal.MainPage.NumberOfCards":
                 userType = (global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MemorijaUniversal.MainPage");
                 xamlMember = new global::MemorijaUniversal.MemorijaUniversal_XamlTypeInfo.XamlMember(this, "NumberOfCards", "String");
-                xamlMember.Getter = get_5_MainPage_NumberOfCards;
-                xamlMember.Setter = set_5_MainPage_NumberOfCards;
+                xamlMember.Getter = get_6_MainPage_NumberOfCards;
+                xamlMember.Setter = set_6_MainPage_NumberOfCards;
                 break;
             }
             return xamlMember;

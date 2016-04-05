@@ -108,7 +108,11 @@ namespace MemorijaUniversal
         public void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
-            if (regex.IsMatch(((TextBox)sender).Text))
+            if (((TextBox)sender).Text.Length == 0)
+            { 
+                ((TextBox)sender).Text = MinValue;
+            }
+            else if (regex.IsMatch(((TextBox)sender).Text))
             {
                 ((TextBox)sender).Text = CurrentValue;
             }

@@ -12,20 +12,28 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Children" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
+    <RootType FullName="MemorijaUniversal.BoardPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -35,19 +43,19 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Inlines" />
     </RootType>
+    <RootType FullName="MemorijaUniversal.CardControl" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="MemorijaUniversal.NumberPicker">
       <RootProperty Name="MinValue" />
       <RootProperty Name="MaxValue" />
       <RootProperty Name="Step" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootEvent Name="Click" />
-    </RootType>
     <RootType FullName="MemorijaUniversal.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />

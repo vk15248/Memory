@@ -24,9 +24,9 @@
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Set up your game:" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Number of players:" FontWeight="Bold"/>
-        <local:NumberPicker x:ConnectionId='1' x:Name="picker1"  Grid.Column="2" Grid.Row="2" MinValue="2" MaxValue="6" ></local:NumberPicker>
+        <local:NumberPicker x:ConnectionId='1' x:Name="picker1"  Grid.Column="2" Grid.Row="2" MinValue="1" MaxValue="6" ></local:NumberPicker>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Number of cards:" FontWeight="Bold"/>
-        <local:NumberPicker x:ConnectionId='2' x:Name="picker2" Grid.Column="2" Grid.Row="3" MinValue="2" MaxValue="144" Step="2" ></local:NumberPicker>
+        <local:NumberPicker x:ConnectionId='2' x:Name="picker2" Grid.Column="2" Grid.Row="3" MinValue="4" MaxValue="144" Step="2" ></local:NumberPicker>
         <Button x:ConnectionId='3'                   Grid.Column="1" Grid.Row="4">Set up</Button>
     </Grid>
 </Page>

@@ -12,7 +12,8 @@ namespace MemorijaUniversal
         int numberOfPlayers;
         private String deck; //TBD
         private List<Card> cards;
-        private Int16 currentPlayer;
+        private List<Card> openCards;
+        private int currentPlayer;
 
         private static readonly Board instance = new Board();
 
@@ -87,7 +88,7 @@ namespace MemorijaUniversal
             }
         }
 
-        public short CurrentPlayer
+        public int CurrentPlayer
         {
             get
             {
@@ -105,6 +106,7 @@ namespace MemorijaUniversal
             NumberOfCards = cards;
             NumberOfPlayers = players;
             currentPlayer = 0;
+            openCards = new List<Card>();
             generateCards();
 
         }
@@ -126,6 +128,28 @@ namespace MemorijaUniversal
                 }
 
             }
+        }
+
+        public bool playMove(Card card)
+        {
+            if(openCards.Count<2 && !openCards.Contains(card))
+                openCards.Add(card);
+            else if (openCards.Count == 2)
+            {
+                if(openCards[0].Number == openCards[1].Number)
+                {
+                    Cards[cards.IndexOf(openCards[0])].Isout = true;
+                    Cards[cards.IndexOf(openCards[1])].Isout = true;
+                }
+                else
+                {
+                    currentPlayer++;
+                    if (currentPlayer == numberOfPlayers) currentPlayer = 0;
+                }
+                openCards = new List<Card>();
+                return true;
+            }
+            return false;
         }
     }
 }
