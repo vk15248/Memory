@@ -64,7 +64,7 @@
                        FontSize="26"/>
             
             <local:NumberPicker x:ConnectionId='9' x:Name="picker1"
-                                MinValue="2"
+                                MinValue="1"
                                 MaxValue="6"> </local:NumberPicker>
         </StackPanel>
         
@@ -79,7 +79,7 @@
                        HorizontalAlignment="Center"
                        FontSize="26"/>
             <local:NumberPicker x:ConnectionId='7' x:Name="picker2"
-            	MinValue="2" MaxValue="144"
+            	MinValue="4" MaxValue="144"
             	HorizontalAlignment="Right"
             	Step="2" HorizontalContentAlignment="Right" />
         </StackPanel>
