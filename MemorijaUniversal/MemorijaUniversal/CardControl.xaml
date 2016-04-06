@@ -5,9 +5,7 @@
     xmlns:local="using:MemorijaUniversal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    mc:Ignorable="d">
 
     <Grid>
         <Button x:Name="button1" Grid.Column="1" Grid.Row="1" Background="#33B07070" Width="40" Height="40" Grid.RowSpan="16" Opacity="0.5" Click="RevealCard">

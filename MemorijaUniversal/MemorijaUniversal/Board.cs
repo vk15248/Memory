@@ -9,11 +9,7 @@ namespace MemorijaUniversal
     public sealed class Board
     {
         int numberOfCards;
-        int numberOfPlayers;
-        private String deck; //TBD
-        private List<Card> cards;
         private List<Card> openCards;
-        private int currentPlayer;
 
         private static readonly Board instance = new Board();
 
@@ -49,63 +45,19 @@ namespace MemorijaUniversal
             }
         }
 
-        public int NumberOfPlayers
-        {
-            get
-            {
-                return numberOfPlayers;
-            }
+        public int NumberOfPlayers { get; set; }
 
-            set
-            {
-                numberOfPlayers = value;
-            }
-        }
+        public string Deck { get; set; }
 
-        public string Deck
-        {
-            get
-            {
-                return deck;
-            }
+        internal List<Card> Cards { get; set; }
 
-            set
-            {
-                deck = value;
-            }
-        }
-
-        internal List<Card> Cards
-        {
-            get
-            {
-                return cards;
-            }
-
-            set
-            {
-                cards = value;
-            }
-        }
-
-        public int CurrentPlayer
-        {
-            get
-            {
-                return currentPlayer;
-            }
-
-            set
-            {
-                currentPlayer = value;
-            }
-        }
+        public int CurrentPlayer { get; set; }
 
         public void startGame(int cards, int players)
         {
             NumberOfCards = cards;
             NumberOfPlayers = players;
-            currentPlayer = 0;
+            CurrentPlayer = 0;
             openCards = new List<Card>();
             generateCards();
 
@@ -138,13 +90,13 @@ namespace MemorijaUniversal
             {
                 if(openCards[0].Number == openCards[1].Number)
                 {
-                    Cards[cards.IndexOf(openCards[0])].Isout = true;
-                    Cards[cards.IndexOf(openCards[1])].Isout = true;
+                    Cards[Cards.IndexOf(openCards[0])].Isout = true;
+                    Cards[Cards.IndexOf(openCards[1])].Isout = true;
                 }
                 else
                 {
-                    currentPlayer++;
-                    if (currentPlayer == numberOfPlayers) currentPlayer = 0;
+                    //CurrentPlayer++;
+                    if (++CurrentPlayer == NumberOfPlayers) CurrentPlayer = 0;
                 }
                 openCards = new List<Card>();
                 return true;

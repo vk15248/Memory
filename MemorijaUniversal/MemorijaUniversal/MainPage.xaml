@@ -47,45 +47,58 @@
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="tbSetup" Grid.Column="1" Grid.Row="1"
+        <TextBlock x:Name="tbSetup"
+                   Grid.Column="1" Grid.Row="1"
                    Margin="0,8,0,8"
                    Text="Set up your game:" Foreground="#C33D27"
                    Style="{ThemeResource TitleTextBlockStyle}"
-                   Typography.Capitals="SmallCaps" HorizontalAlignment="Center"/>
+                   Typography.Capitals="SmallCaps"
+                   HorizontalAlignment="Center"/>
         
-        <StackPanel x:Name="playersStack" Orientation="Horizontal"
+        <StackPanel x:Name="playersStack"
+                    Orientation="Horizontal"
                     Margin="0,8,0,8"
-                    Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
+                    Grid.Column="1" Grid.Row="2"
+                    HorizontalAlignment="Center">
             
-            <TextBlock x:Name ="tbNumber" TextWrapping="WrapWholeWords"
-                   Text="Number of players:"
+            <TextBlock x:Name ="tbNumber"
+                       TextWrapping="WrapWholeWords"
+                       Text="Players:"
                        FontWeight="Light"
                        VerticalAlignment="Center"
                        FontSize="26"/>
-            
+
             <local:NumberPicker x:Name="picker1"
                                 MinValue="2"
-                                MaxValue="6"> </local:NumberPicker>
+                                MaxValue="6">
+                
+            </local:NumberPicker>
         </StackPanel>
         
-        <StackPanel x:Name="cardsStack" Orientation="Horizontal"
+        <StackPanel x:Name="cardsStack"
+                    Orientation="Horizontal"
                     Margin="0,8,0,8"
-                    Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center">
+                    Grid.Column="1" Grid.Row="3"
+                    HorizontalAlignment="Center">
             
             <TextBlock x:Name="tbCards" 
-                       Text="Number of cards:"
+                       Text="Cards:"
                        FontWeight="Light"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="26"/>
+            
             <local:NumberPicker x:Name="picker2"
             	MinValue="2" MaxValue="144"
             	HorizontalAlignment="Right"
-            	Step="2" HorizontalContentAlignment="Right" />
+            	Step="2" HorizontalContentAlignment="Right" Margin="18,0,0,0" />
         </StackPanel>
 
-        <Button x:Name="btnSetUpGame" Click="SetUpGame" Grid.Column="1"
-                Grid.Row="4" HorizontalAlignment="Center" Margin="0,8,0,8"
+        <Button x:Name="btnSetUpGame"
+                Click="SetUpGame"
+                Grid.Column="1" Grid.Row="4"
+                HorizontalAlignment="Center"
+                Margin="0,8,0,8"
                 FontWeight="Light"
                 VerticalAlignment="Center"
                 FontSize="26">Set up</Button>

@@ -7,8 +7,71 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid x:Name="BoardGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="BoardRoot"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+ 
+                    <VisualState.Setters>
+                        <Setter Target="BoardRoot.Background"
+                                Value="Azure" />
+                        <Setter Target="StackPanelPlayer.Height" Value="55" />
+                        <Setter Target="PlayerName.FontSize" Value="32" />
+                        <Setter Target="PlayerPoints.FontSize" Value="32" />
+                    </VisualState.Setters>
+                    
+                </VisualState>
+ 
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+ 
+                    <VisualState.Setters>
+                        <Setter Target="BoardRoot.Background"
+                                Value="Beige" />
+                        <Setter Target="StackPanelPlayer.Height" Value="30" />
+                        <Setter Target="PlayerName.FontSize" Value="22" />
+                        <Setter Target="PlayerPoints.FontSize" Value="22" />
+
+                        <!--<Setter Target="cardsStack.HorizontalAlignment" Value="Center"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <StackPanel x:Name="StackPanelPlayer"
+                    Orientation="Horizontal"
+                    Height="55"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="0" Grid.Column="0" Margin="0,5,0,0"
+                    >
+            <TextBlock x:Name="PlayerName"
+                       Height="50"
+                       Foreground="Blue"
+                       Text="Player X">
+            </TextBlock>
+            <TextBlock x:Name="PlayerPoints"
+                       Height="50"
+                       Text="500" Margin="20,0,0,0">
+            </TextBlock>
+        </StackPanel>
+        <Grid x:Name="BoardGrid"
+              Grid.Row="1" Grid.Column="0"
+              Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+              >
         </Grid>
     </Grid>
 </Page>

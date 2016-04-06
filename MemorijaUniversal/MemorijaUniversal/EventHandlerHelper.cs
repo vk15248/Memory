@@ -16,20 +16,31 @@ namespace MemorijaUniversal
             int k = 0;
             for (int i = 0; i < Board.Instance.NumberOfCards; i++)
             {
-                if (!Board.Instance.Cards[i].Isout) {
+                if (!Board.Instance.Cards[i].Isout)
+                {
                     CardControl cardControl = new CardControl();
                     cardControl.CardValue = Board.Instance.Cards[i];
                     cardControl.Margin = new Thickness(6, 6, 6, 6);
                     Windows.UI.Xaml.Controls.Grid.SetColumn(cardControl, j);
                     Windows.UI.Xaml.Controls.Grid.SetRow(cardControl, k);
-                    if (k == cols - 1) { k = 0; j++; }
-                    else k++;
+
+                    if (k == cols - 1)
+                    {
+                        k = 0; j++; 
+                    }
+                    else
+                        k++;
                     BoardGrid.Children.Add(cardControl);
                 }
                 else
                 {
-                    if (k == cols - 1) { k = 0; j++; }
-                    else k++;
+                    if (k == cols - 1)
+                    {
+                        k = 0;
+                        j++; 
+                    }
+                    else
+                        k++;
                 }
             }
         }
