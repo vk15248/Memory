@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-06T02:20:54.255</Modified>
+      <Modified>2016-04-06T02:52:59.224</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\MemorijaUniversal.exe">
       <PackagePath>entrypoint\MemorijaUniversal.exe</PackagePath>
-      <Modified>2016-04-06T02:20:53.292</Modified>
+      <Modified>2016-04-06T02:52:57.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -506,7 +506,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\MemorijaUniversal.xr.xml">
       <PackagePath>MemorijaUniversal.xr.xml</PackagePath>
-      <Modified>2016-04-06T02:20:53.093</Modified>
+      <Modified>2016-04-06T02:52:35.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -514,11 +514,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-04-06T02:20:54.078</Modified>
+      <Modified>2016-04-06T02:52:57.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\Core\MemorijaUniversal.exe">
       <PackagePath>MemorijaUniversal.exe</PackagePath>
-      <Modified>2016-04-06T02:20:54.253</Modified>
+      <Modified>2016-04-06T02:52:59.199</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -33,9 +33,9 @@
         <!-- D: 
         -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="70"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -48,16 +48,19 @@
         </Grid.RowDefinitions>
 
         <TextBlock x:ConnectionId='2' x:Name="tbSetup" Grid.Column="1" Grid.Row="1"
+                   Margin="0,8,0,8"
                    Text="Set up your game:" Foreground="#C33D27"
                    Style="{ThemeResource TitleTextBlockStyle}"
                    Typography.Capitals="SmallCaps" HorizontalAlignment="Center"/>
         
         <StackPanel x:ConnectionId='3' x:Name="playersStack" Orientation="Horizontal"
+                    Margin="0,8,0,8"
                     Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
             
             <TextBlock x:ConnectionId='8' x:Name ="tbNumber" TextWrapping="WrapWholeWords"
                    Text="Number of players:"
                        FontWeight="Light"
+                       VerticalAlignment="Center"
                        FontSize="26"/>
             
             <local:NumberPicker x:ConnectionId='9' x:Name="picker1"
@@ -65,21 +68,27 @@
                                 MaxValue="6"> </local:NumberPicker>
         </StackPanel>
         
-        <StackPanel x:ConnectionId='4' x:Name="cardsStack" Grid.Column="1" Grid.Row="3" 
-                    Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel x:ConnectionId='4' x:Name="cardsStack" Orientation="Horizontal"
+                    Margin="0,8,0,8"
+                    Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center">
             
             <TextBlock x:ConnectionId='6' x:Name="tbCards" 
                        Text="Number of cards:"
                        FontWeight="Light"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                        FontSize="26"/>
-
             <local:NumberPicker x:ConnectionId='7' x:Name="picker2"
-                            MinValue="2" MaxValue="144"
-                            Step="2" > </local:NumberPicker>
+            	MinValue="2" MaxValue="144"
+            	HorizontalAlignment="Right"
+            	Step="2" HorizontalContentAlignment="Right" />
         </StackPanel>
-        
-        <Button x:ConnectionId='5' x:Name="btnSetUpGame"                   Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center">
-            Set up</Button>
+
+        <Button x:ConnectionId='5' x:Name="btnSetUpGame"                   Grid.Column="1"
+                Grid.Row="4" HorizontalAlignment="Center" Margin="0,8,0,8"
+                FontWeight="Light"
+                VerticalAlignment="Center"
+                FontSize="26">Set up</Button>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -108,11 +117,13 @@
                         <Setter Target="LayoutRoot.Background"
                                 Value="Beige" />
                         <!--<Setter Target="LayputRoot.Column" Value="3" />-->
+                        <Setter Target="tbSetup.(Grid.Column)" Value="0" />
                         <Setter Target="tbSetup.(Grid.ColumnSpan)" Value="3" />
-                        <Setter Target="cardsStack.(Grid.ColumnSpan)" Value="3" />
-                        <Setter Target="playersStack.(Grid.ColumnSpan)" Value="3" />
                         <Setter Target="playersStack.(Grid.Column)" Value="0" />
                         <Setter Target="cardsStack.(Grid.Column)" Value="0" />
+                        <Setter Target="cardsStack.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="playersStack.(Grid.ColumnSpan)" Value="3" />
+                        <!--<Setter Target="cardsStack.HorizontalAlignment" Value="Center"/>-->
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
