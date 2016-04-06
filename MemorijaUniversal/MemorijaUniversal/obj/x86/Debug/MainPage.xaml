@@ -9,8 +9,9 @@
 
   
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
+    <Grid x:ConnectionId='1' x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- V: -->
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -24,10 +25,111 @@
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Set up your game:" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Number of players:" FontWeight="Bold"/>
-        <local:NumberPicker x:ConnectionId='1' x:Name="picker1"  Grid.Column="2" Grid.Row="2" MinValue="1" MaxValue="6" ></local:NumberPicker>
+        <local:NumberPicker x:Name="picker1"  Grid.Column="1" Grid.Row="2" MinValue="1" MaxValue="6" ></local:NumberPicker>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Number of cards:" FontWeight="Bold"/>
-        <local:NumberPicker x:ConnectionId='2' x:Name="picker2" Grid.Column="2" Grid.Row="3" MinValue="4" MaxValue="144" Step="2" ></local:NumberPicker>
-        <Button x:ConnectionId='3'                   Grid.Column="1" Grid.Row="4">Set up</Button>
+        <local:NumberPicker x:Name="picker2" Grid.Column="1" Grid.Row="3" MinValue="4" MaxValue="144" Step="2" ></local:NumberPicker>
+        <Button Click="SetUpGame" Grid.Column="1" Grid.Row="4">Set up</Button>-->
+        
+        <!-- D: 
+        -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:ConnectionId='2' x:Name="tbSetup" Grid.Column="1" Grid.Row="1"
+                   Margin="0,8,0,8"
+                   Text="Set up your game:" Foreground="#C33D27"
+                   Style="{ThemeResource TitleTextBlockStyle}"
+                   Typography.Capitals="SmallCaps" HorizontalAlignment="Center"/>
+        
+        <StackPanel x:ConnectionId='3' x:Name="playersStack" Orientation="Horizontal"
+                    Margin="0,8,0,8"
+                    Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
+            
+            <TextBlock x:ConnectionId='8' x:Name ="tbNumber" TextWrapping="WrapWholeWords"
+                   Text="Number of players:"
+                       FontWeight="Light"
+                       VerticalAlignment="Center"
+                       FontSize="26"/>
+            
+            <local:NumberPicker x:ConnectionId='9' x:Name="picker1"
+                                MinValue="2"
+                                MaxValue="6"> </local:NumberPicker>
+        </StackPanel>
+        
+        <StackPanel x:ConnectionId='4' x:Name="cardsStack" Orientation="Horizontal"
+                    Margin="0,8,0,8"
+                    Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center">
+            
+            <TextBlock x:ConnectionId='6' x:Name="tbCards" 
+                       Text="Number of cards:"
+                       FontWeight="Light"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="26"/>
+            <local:NumberPicker x:ConnectionId='7' x:Name="picker2"
+            	MinValue="2" MaxValue="144"
+            	HorizontalAlignment="Right"
+            	Step="2" HorizontalContentAlignment="Right" />
+        </StackPanel>
+
+        <Button x:ConnectionId='5' x:Name="btnSetUpGame"                   Grid.Column="1"
+                Grid.Row="4" HorizontalAlignment="Center" Margin="0,8,0,8"
+                FontWeight="Light"
+                VerticalAlignment="Center"
+                FontSize="26">Set up</Button>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='10' x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+ 
+                    <VisualState.Setters>
+                        <Setter Target="LayoutRoot.Background"
+                                Value="Azure" />
+                        
+                        <Setter Target="tbSetup.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="playersStack.(Grid.Column)" Value="1" />
+                        <Setter Target="cardsStack.(Grid.Column)" Value="1" />
+                        <Setter Target="btnSetUpGame.(Grid.Row)" Value="4" />
+                    </VisualState.Setters>
+                    
+                </VisualState>
+ 
+                <VisualState x:ConnectionId='11' x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+ 
+                    <VisualState.Setters>
+                        <Setter Target="LayoutRoot.Background"
+                                Value="Beige" />
+                        <!--<Setter Target="LayputRoot.Column" Value="3" />-->
+                        <Setter Target="tbSetup.(Grid.Column)" Value="0" />
+                        <Setter Target="tbSetup.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="playersStack.(Grid.Column)" Value="0" />
+                        <Setter Target="cardsStack.(Grid.Column)" Value="0" />
+                        <Setter Target="cardsStack.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="playersStack.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="btnSetUpGame.(Grid.Row)" Value="5" />
+                        <!--<Setter Target="cardsStack.HorizontalAlignment" Value="Center"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>
 

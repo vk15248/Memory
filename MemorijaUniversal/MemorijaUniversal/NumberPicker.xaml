@@ -6,22 +6,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Name="numberPicker"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    x:Name="numberPicker">
 
-    <Grid>
+    <Grid MaxHeight="50">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="#FFF2F2F2" BorderThickness="0,0,3,0" Tapped="Reduce_Tapped">
-            <TextBlock FontSize="15" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">-</TextBlock>
+            <TextBlock FontSize="25" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">-</TextBlock>
         </Border>
         <TextBox Name="content" FontSize="25" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding MinValue, ElementName=numberPicker}" TextChanged="TextBox_TextChanged"></TextBox>
         <Border BorderBrush="#FFF2F2F2" BorderThickness="2,0,0,0" Grid.Column="2" Tapped="Increase_Tapped">
-            <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">+</TextBlock>
+            <TextBlock FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">+</TextBlock>
         </Border>
     </Grid>
 </UserControl>
