@@ -1,1 +1,1 @@
-X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\MemorijaUniversal.csproj;x86
+C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\MemorijaUniversal.csproj;x86
