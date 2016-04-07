@@ -73,6 +73,7 @@
                                 MaxValue="6">
                 
             </local:NumberPicker>
+            
         </StackPanel>
         
         <StackPanel x:Name="cardsStack"
@@ -91,7 +92,8 @@
             <local:NumberPicker x:Name="picker2"
             	MinValue="2" MaxValue="144"
             	HorizontalAlignment="Right"
-            	Step="2" HorizontalContentAlignment="Right" Margin="18,0,0,0" />
+            	Step="2" HorizontalContentAlignment="Right"
+                Margin="18,0,0,0" />
         </StackPanel>
 
         <Button x:Name="btnSetUpGame"
@@ -101,7 +103,8 @@
                 Margin="0,8,0,8"
                 FontWeight="Light"
                 VerticalAlignment="Center"
-                FontSize="26">Set up</Button>
+                FontSize="26">Set up
+        </Button>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -115,6 +118,8 @@
                                 Value="Azure" />
                         
                         <Setter Target="tbSetup.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="tbSetup.(Grid.Row)" Value="1" />
+                        <Setter Target="tbSetup.Margin" Value="0,8,0,8" />
                         <Setter Target="playersStack.(Grid.Column)" Value="1" />
                         <Setter Target="cardsStack.(Grid.Column)" Value="1" />
                         <Setter Target="btnSetUpGame.(Grid.Row)" Value="4" />
@@ -133,6 +138,8 @@
                         <!--<Setter Target="LayputRoot.Column" Value="3" />-->
                         <Setter Target="tbSetup.(Grid.Column)" Value="0" />
                         <Setter Target="tbSetup.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="tbSetup.(Grid.Row)" Value="0" />
+                        <Setter Target="tbSetup.Margin" Value="0,30,0,0" />
                         <Setter Target="playersStack.(Grid.Column)" Value="0" />
                         <Setter Target="cardsStack.(Grid.Column)" Value="0" />
                         <Setter Target="cardsStack.(Grid.ColumnSpan)" Value="3" />

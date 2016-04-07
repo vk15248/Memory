@@ -96,6 +96,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Step" />
       <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="MemorijaUniversal.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Border">

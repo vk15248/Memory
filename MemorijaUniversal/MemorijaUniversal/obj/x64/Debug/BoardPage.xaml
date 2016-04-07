@@ -56,17 +56,21 @@
                     Height="55"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
-                    Grid.Row="0" Grid.Column="0" Margin="0,5,0,0"
-                    >
+                    Grid.Row="0" Grid.Column="0" 
+                    Margin="0,5,0,0">
+            
             <TextBlock x:ConnectionId='6' x:Name="PlayerName"
                        Height="50"
                        Foreground="Blue"
                        Text="Player X">
             </TextBlock>
+            
             <TextBlock x:ConnectionId='7' x:Name="PlayerPoints"
                        Height="50"
-                       Text="500" Margin="20,0,0,0">
+                       Text="500"
+                       Margin="20,0,0,0">
             </TextBlock>
+            
         </StackPanel>
         <Grid x:ConnectionId='5' x:Name="BoardGrid"
               Grid.Row="1" Grid.Column="0"

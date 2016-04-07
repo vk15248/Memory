@@ -348,8 +348,9 @@
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Square44x44Logo.png">
+      <PackagePath>Assets\Square44x44Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -377,6 +378,9 @@
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dino\Source\Repos\Memory\MemorijaUniversal\MemorijaUniversal\bin\ARM\Debug\MemorijaUniversal.xr.xml">
       <PackagePath>MemorijaUniversal.xr.xml</PackagePath>
