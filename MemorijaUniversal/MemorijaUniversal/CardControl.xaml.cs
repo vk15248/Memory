@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
@@ -22,12 +23,7 @@ namespace MemorijaUniversal
         public CardControl()
         {
             this.InitializeComponent();
-           /* if (CardValue.Isout)
-            {
-                button1.Visibility = Visibility.Collapsed;
-               // this.Visibility = Visibility.Collapsed;
-            }*/
-            buttonText.Text = "";
+            buttonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/background1.jpg"));
         }
 
         public static readonly DependencyProperty CardProperty = DependencyProperty.Register
@@ -46,9 +42,9 @@ namespace MemorijaUniversal
 
         private void RevealCard(object sender, RoutedEventArgs e)
         {
-            buttonText.Text = CardValue.Number.ToString();
+            buttonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/" + Board.Instance.Theme + "/" + CardValue.Number.ToString() + ".jpg"));
             if (Board.Instance.playMove(CardValue))
-                EventHandlerHelper.displayBoard(Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards)), (Grid)this.Parent); 
+                EventHandlerHelper.displayBoard(Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards)), (Grid)this.Parent);
         }
     }
 }

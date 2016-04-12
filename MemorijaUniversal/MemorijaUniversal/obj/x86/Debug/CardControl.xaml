@@ -8,8 +8,17 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button x:ConnectionId='1' x:Name="button1" Grid.Column="1" Grid.Row="1" Background="#33B07070" Width="40" Height="40" Grid.RowSpan="16" Opacity="0.5"                   >
-            <TextBlock x:ConnectionId='2' x:Name="buttonText"></TextBlock></Button>
+        <Button x:ConnectionId='1' x:Name="button1" 
+                Grid.Column="1" Grid.Row="1" 
+                Width="100" Height="100" 
+                Grid.RowSpan="16" 
+                Opacity="0.5" 
+                                   VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Button.Content>
+                <Image x:ConnectionId='2' x:Name="buttonImage" Stretch="Fill" VerticalAlignment="Stretch"/>
+            </Button.Content>
+        </Button> 
+        <!-- V: <TextBlock x:Name="buttonText"></TextBlock>-->
     </Grid>
 </UserControl>
 

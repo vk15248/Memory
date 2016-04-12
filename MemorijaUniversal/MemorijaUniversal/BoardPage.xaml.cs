@@ -34,26 +34,18 @@ namespace MemorijaUniversal
             {
                 rowDef.Height = GridLength.Auto;
             }
+            EventHandlerHelper.PlayerName = PlayerName;
+            EventHandlerHelper.PlayerScore = PlayerPoints;
             EventHandlerHelper.displayBoard(cols, BoardGrid);
+
+            /*Binding binding = new Binding();
+
+            binding.Path = new PropertyPath("CurrentPlayerText");
+            binding.Mode = BindingMode.OneWay;
+            binding.Source = Board.Instance;
+            // or PlayerName.DataContext = Board.Instance;
+            PlayerName.SetBinding(TextBlock.TextProperty, binding);*/
+            //DataContext = Board.Instance;
         }
-
-
-/*        private void displayBoard(int cols, Grid BoardGrid)
-        {
-            int j = 0;
-            int k = 0;
-            for (int i = 0; i < Board.Instance.NumberOfCards; i++)
-            {
-                CardControl cardControl = new CardControl();
-                cardControl.CardValue = Board.Instance.Cards[i];
-                cardControl.Margin = new Thickness(6, 6, 6, 6);
-                Grid.SetColumn(cardControl, j);
-                Grid.SetRow(cardControl, k);
-                if (k == cols - 1) { k = 0; j++; }
-                else k++;
-                BoardGrid.Children.Add(cardControl);
-            }
-
-        }*/
     }
 }

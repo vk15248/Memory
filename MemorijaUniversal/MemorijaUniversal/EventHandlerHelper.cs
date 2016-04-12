@@ -9,6 +9,9 @@ namespace MemorijaUniversal
 {
     class EventHandlerHelper
     {
+        public static Windows.UI.Xaml.Controls.TextBlock PlayerName { get; set;}
+        public static Windows.UI.Xaml.Controls.TextBlock PlayerScore { get; set; }
+
         public static void displayBoard(int cols, Windows.UI.Xaml.Controls.Grid BoardGrid)
         {
             BoardGrid.Children.Clear();
@@ -24,24 +27,28 @@ namespace MemorijaUniversal
                     Windows.UI.Xaml.Controls.Grid.SetColumn(cardControl, j);
                     Windows.UI.Xaml.Controls.Grid.SetRow(cardControl, k);
 
-                    if (k == cols - 1)
+                    if (j == cols-1)
                     {
-                        k = 0; j++; 
+                        j = 0; k++; 
                     }
                     else
-                        k++;
+                       j++;
                     BoardGrid.Children.Add(cardControl);
                 }
                 else
                 {
-                    if (k == cols - 1)
+
+                    if (j == cols - 1)
                     {
-                        k = 0;
-                        j++; 
+                        j = 0; k++;
                     }
                     else
-                        k++;
+                        j++;
                 }
+                if(PlayerName!=null)
+                    PlayerName.Text = Board.Instance.CurrentPlayerText;
+                if (PlayerScore != null)
+                    PlayerScore.Text = Board.Instance.CurrentScoreText;
             }
         }
     }

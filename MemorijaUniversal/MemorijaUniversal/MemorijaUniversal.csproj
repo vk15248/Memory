@@ -92,6 +92,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\background1.jpg" />
+    <Content Include="Assets\Nature\1.jpg" />
+    <Content Include="Assets\Nature\2.jpg" />
+    <Content Include="Assets\Nature\3.jpg" />
+    <Content Include="Assets\Nature\4.jpg" />
+    <Content Include="Assets\Nature\5.jpg" />
+    <Content Include="Assets\Nature\6.jpg" />
+    <Content Include="Assets\Nature\7.jpg" />
+    <Content Include="Assets\Nature\8.jpg" />
+    <Content Include="Assets\Nature\9.jpg" />
+    <Content Include="Assets\Nature\10.jpg" />
+    <Content Include="Assets\Nature\11.jpg" />
+    <Content Include="Assets\Nature\12.jpg" />
     <Content Include="StoreLogo.png" />
     <None Include="project.json" />
   </ItemGroup>

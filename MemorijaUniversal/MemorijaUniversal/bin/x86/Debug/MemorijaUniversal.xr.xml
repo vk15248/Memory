@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CurrentScoreText" />
+    <RootPropertyPathName Name="CurrentPlayerText" />
     <RootPropertyPathName Name="MinValue" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -68,22 +70,29 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Inlines" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+    </RootType>
     <RootType FullName="MemorijaUniversal.BoardPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="MemorijaUniversal.CardControl" />
     <RootType FullName="Windows.UI.Xaml.Documents.Typography">
@@ -112,9 +121,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Text" />
       <RootEvent Name="TextChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="ElementName" />
     </RootType>
   </Roots.RootTypes>
 </Roots>

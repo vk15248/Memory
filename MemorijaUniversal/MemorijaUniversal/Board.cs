@@ -10,6 +10,7 @@ namespace MemorijaUniversal
     {
         int numberOfCards;
         private List<Card> openCards;
+        private List<int> score;
 
         private static readonly Board instance = new Board();
 
@@ -47,11 +48,17 @@ namespace MemorijaUniversal
 
         public int NumberOfPlayers { get; set; }
 
-        public string Deck { get; set; }
+        public string Theme { get; set; }
 
         internal List<Card> Cards { get; set; }
 
         public int CurrentPlayer { get; set; }
+
+        public List<int> Score { get; set; }
+    
+        public string CurrentPlayerText { get { return "Player " + CurrentPlayer.ToString(); } }
+
+        public string CurrentScoreText { get { return Score[CurrentPlayer].ToString(); } }
 
         public void startGame(int cards, int players)
         {
@@ -59,8 +66,15 @@ namespace MemorijaUniversal
             NumberOfPlayers = players;
             CurrentPlayer = 0;
             openCards = new List<Card>();
+            Score = new List<int>();
+
+            for (int i = 0; i < NumberOfPlayers; i++)
+                Score.Add(0);
+
             generateCards();
 
+            //TBD
+            Theme = "Nature";
         }
 
         private void generateCards()
@@ -92,10 +106,10 @@ namespace MemorijaUniversal
                 {
                     Cards[Cards.IndexOf(openCards[0])].Isout = true;
                     Cards[Cards.IndexOf(openCards[1])].Isout = true;
+                    Score[CurrentPlayer]++;
                 }
                 else
                 {
-                    //CurrentPlayer++;
                     if (++CurrentPlayer == NumberOfPlayers) CurrentPlayer = 0;
                 }
                 openCards = new List<Card>();

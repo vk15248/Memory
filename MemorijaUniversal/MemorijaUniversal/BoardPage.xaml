@@ -62,12 +62,12 @@
             <TextBlock x:Name="PlayerName"
                        Height="50"
                        Foreground="Blue"
-                       Text="Player X">
+                       Text="{Binding CurrentPlayerText}">
             </TextBlock>
             
             <TextBlock x:Name="PlayerPoints"
                        Height="50"
-                       Text="500"
+                      Text="{Binding CurrentScoreText}"
                        Margin="20,0,0,0">
             </TextBlock>
             

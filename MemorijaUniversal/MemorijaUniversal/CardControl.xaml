@@ -8,7 +8,16 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button x:Name="button1" Grid.Column="1" Grid.Row="1" Background="#33B07070" Width="40" Height="40" Grid.RowSpan="16" Opacity="0.5" Click="RevealCard">
-            <TextBlock x:Name="buttonText"></TextBlock></Button>
+        <Button x:Name="button1" 
+                Grid.Column="1" Grid.Row="1" 
+                Width="100" Height="100" 
+                Grid.RowSpan="16" 
+                Opacity="0.5" 
+                Click="RevealCard" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Button.Content>
+                <Image x:Name="buttonImage" Stretch="Fill" VerticalAlignment="Stretch"/>
+            </Button.Content>
+        </Button> 
+        <!-- V: <TextBlock x:Name="buttonText"></TextBlock>-->
     </Grid>
 </UserControl>
