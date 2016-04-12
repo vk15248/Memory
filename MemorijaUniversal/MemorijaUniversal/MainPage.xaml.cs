@@ -66,8 +66,9 @@ namespace MemorijaUniversal
         private void SetUpGame(object sender, RoutedEventArgs e)
         {
             Board.Instance.startGame(int.Parse(picker2.CurrentValue), int.Parse(picker1.CurrentValue));
-            BoardPage boardPage = new BoardPage();
-            this.Content = boardPage;
+           // BoardPage boardPage = new BoardPage();
+            this.Frame.Navigate(typeof(BoardPage));
+            // this.Content = boardPage;
         }
     }
 }

@@ -90,7 +90,7 @@
                        FontSize="26"/>
             
             <local:NumberPicker x:Name="picker2"
-            	MinValue="2" MaxValue="144"
+            	MinValue="4" MaxValue="144"
             	HorizontalAlignment="Right"
             	Step="2" HorizontalContentAlignment="Right"
                 Margin="18,0,0,0" />
