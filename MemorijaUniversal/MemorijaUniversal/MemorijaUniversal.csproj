@@ -105,6 +105,8 @@
     <Content Include="Assets\Nature\10.jpg" />
     <Content Include="Assets\Nature\11.jpg" />
     <Content Include="Assets\Nature\12.jpg" />
+    <Content Include="Assets\Nature\13.jpg" />
+    <Content Include="Assets\Nature\14.jpg" />
     <Content Include="StoreLogo.png" />
     <None Include="project.json" />
   </ItemGroup>
