@@ -117,5 +117,23 @@ namespace MemorijaUniversal
             }
             return false;
         }
+
+        public bool isGameOver()
+        {
+            foreach (Card c in Cards)
+            {
+                if (!c.Isout) return false;
+            }
+            return true;
+        }
+
+        public int getWinner()
+        {
+            int max = 0;
+            int winner = 0;
+            for(int i = 0; i<NumberOfPlayers; i++)
+                if (Score[i] > max) winner = i;
+            return winner;
+        }
     }
 }

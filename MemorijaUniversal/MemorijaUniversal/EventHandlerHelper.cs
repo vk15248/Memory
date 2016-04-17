@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace MemorijaUniversal
 {
@@ -49,6 +50,29 @@ namespace MemorijaUniversal
                     PlayerName.Text = Board.Instance.CurrentPlayerText;
                 if (PlayerScore != null)
                     PlayerScore.Text = Board.Instance.CurrentScoreText;
+            }
+
+            openGameOverScreen();
+        }
+
+        public static async void openGameOverScreen()
+        {
+            if (Board.Instance.isGameOver())
+            {
+                var dialog = new ContentDialog()
+                {
+                    Title = "Game over!",
+                    MaxWidth = 400,// Required for Mobile!
+                    Content = "Winner is " + Board.Instance.getWinner()
+                };
+                dialog.PrimaryButtonText = "OK";
+                dialog.IsPrimaryButtonEnabled = true;
+                dialog.PrimaryButtonClick += delegate
+                {
+                    dialog.Hide();
+                };
+
+                var result = await dialog.ShowAsync();
             }
         }
     }
