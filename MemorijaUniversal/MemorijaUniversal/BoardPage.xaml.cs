@@ -52,7 +52,8 @@ namespace MemorijaUniversal
             EventHandlerHelper.Width = BoardGrid.ActualWidth;
             EventHandlerHelper.Height = BoardGrid.ActualHeight;
             EventHandlerHelper.displayBoard(cols, BoardGrid);
-
+            
+           
         }
     }
 }

@@ -56,10 +56,10 @@ namespace MemorijaUniversal
                     PlayerScore.Text = Board.Instance.CurrentScoreText;
             }
 
-            openGameOverScreen();
+            openGameOverScreen(BoardGrid);
         }
 
-        public static async void openGameOverScreen()
+        public static async void openGameOverScreen(Windows.UI.Xaml.Controls.Grid BoardGrid)
         {
             if (Board.Instance.isGameOver())
             {
@@ -69,15 +69,30 @@ namespace MemorijaUniversal
                     MaxWidth = 400,// Required for Mobile!
                     Content = "Winner is " + Board.Instance.getWinner()
                 };
-                dialog.PrimaryButtonText = "OK";
+                dialog.PrimaryButtonText = "Start new game";
+                dialog.SecondaryButtonText = "Go back to set up";
                 dialog.IsPrimaryButtonEnabled = true;
-                dialog.PrimaryButtonClick += delegate
+                dialog.PrimaryButtonClick +=  delegate
                 {
+                    Board.Instance.startGame(Board.Instance.NumberOfCards, Board.Instance.NumberOfPlayers);
+                    displayBoard(Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards)), BoardGrid);
+                    dialog.Hide();
+                };
+                dialog.SecondaryButtonClick += delegate
+                {
+                    Page boardPage = getParentPage(BoardGrid);
+                    boardPage.Frame.Navigate(typeof(MainPage));
                     dialog.Hide();
                 };
 
                 var result = await dialog.ShowAsync();
             }
+        }
+
+        private static Page getParentPage(Grid control)
+        {
+            if (control.Parent is Page) return (Page)control.Parent;
+            else return getParentPage((Grid)control.Parent);
         }
     }
 }
