@@ -12,6 +12,8 @@ namespace MemorijaUniversal
     {
         public static Windows.UI.Xaml.Controls.TextBlock PlayerName { get; set;}
         public static Windows.UI.Xaml.Controls.TextBlock PlayerScore { get; set; }
+        public static double Width { get; set; }
+        public static double Height { get; set; }
 
         public static void displayBoard(int cols, Windows.UI.Xaml.Controls.Grid BoardGrid)
         {
@@ -24,7 +26,9 @@ namespace MemorijaUniversal
                 {
                     CardControl cardControl = new CardControl();
                     cardControl.CardValue = Board.Instance.Cards[i];
-                    cardControl.Margin = new Thickness(6, 6, 6, 6);
+                    cardControl.Margin = new Thickness(2, 2, 2, 2);
+                    cardControl.Height = (Height / (cols+1)) -2;
+                    cardControl.Width = (Width / cols) -2;
                     Windows.UI.Xaml.Controls.Grid.SetColumn(cardControl, j);
                     Windows.UI.Xaml.Controls.Grid.SetRow(cardControl, k);
 

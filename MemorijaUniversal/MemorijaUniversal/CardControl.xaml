@@ -10,7 +10,6 @@
     <Grid>
         <Button x:Name="button1" 
                 Grid.Column="1" Grid.Row="1" 
-                Width="100" Height="100" 
                 Grid.RowSpan="16" 
                 Opacity="0.5" 
                 Click="RevealCard" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">

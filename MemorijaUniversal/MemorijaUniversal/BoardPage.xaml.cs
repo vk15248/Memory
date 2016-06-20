@@ -24,20 +24,8 @@ namespace MemorijaUniversal
     {
         public BoardPage()
         {
+            
             this.InitializeComponent();
-            int cols = Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards));
-            for (int i = 0; i < cols; i++)
-                BoardGrid.ColumnDefinitions.Add(new ColumnDefinition());
-            for (int i = 0; i < cols+1; i++)
-                BoardGrid.RowDefinitions.Add(new RowDefinition());
-            foreach(RowDefinition rowDef in BoardGrid.RowDefinitions)
-            {
-                rowDef.Height = GridLength.Auto;
-            }
-            EventHandlerHelper.PlayerName = PlayerName;
-            EventHandlerHelper.PlayerScore = PlayerPoints;
-            EventHandlerHelper.displayBoard(cols, BoardGrid);
-
             /*Binding binding = new Binding();
 
             binding.Path = new PropertyPath("CurrentPlayerText");
@@ -46,6 +34,25 @@ namespace MemorijaUniversal
             // or PlayerName.DataContext = Board.Instance;
             PlayerName.SetBinding(TextBlock.TextProperty, binding);*/
             //DataContext = Board.Instance;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            int cols = Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards));
+            for (int i = 0; i < cols; i++)
+                BoardGrid.ColumnDefinitions.Add(new ColumnDefinition());
+            for (int i = 0; i < cols + 1; i++)
+                BoardGrid.RowDefinitions.Add(new RowDefinition());
+            foreach (RowDefinition rowDef in BoardGrid.RowDefinitions)
+            {
+                rowDef.Height = GridLength.Auto;
+            }
+            EventHandlerHelper.PlayerName = PlayerName;
+            EventHandlerHelper.PlayerScore = PlayerPoints;
+            EventHandlerHelper.Width = BoardGrid.ActualWidth;
+            EventHandlerHelper.Height = BoardGrid.ActualHeight;
+            EventHandlerHelper.displayBoard(cols, BoardGrid);
+
         }
     }
 }
