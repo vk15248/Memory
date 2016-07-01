@@ -22,13 +22,13 @@
     <AppXManifest Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-20T18:21:45.220</Modified>
+      <Modified>2016-07-01T09:07:08.163</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\MemorijaUniversal.exe">
       <PackagePath>entrypoint\MemorijaUniversal.exe</PackagePath>
-      <Modified>2016-06-20T18:21:44.912</Modified>
+      <Modified>2016-07-01T09:07:03.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -618,9 +618,45 @@
       <PackagePath>Assets\Nature\47.jpg</PackagePath>
       <Modified>2016-06-20T17:22:40.990</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\48.jpg">
+      <PackagePath>Assets\Nature\48.jpg</PackagePath>
+      <Modified>2016-06-20T18:22:43.869</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\49.jpg">
+      <PackagePath>Assets\Nature\49.jpg</PackagePath>
+      <Modified>2016-06-20T18:23:10.189</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\5.jpg">
       <PackagePath>Assets\Nature\5.jpg</PackagePath>
       <Modified>2016-04-12T17:27:26.027</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\50.jpg">
+      <PackagePath>Assets\Nature\50.jpg</PackagePath>
+      <Modified>2016-06-20T18:24:30.245</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\51.jpg">
+      <PackagePath>Assets\Nature\51.jpg</PackagePath>
+      <Modified>2016-06-20T18:25:28.747</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\52.jpg">
+      <PackagePath>Assets\Nature\52.jpg</PackagePath>
+      <Modified>2016-06-22T15:45:47.375</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\53.jpg">
+      <PackagePath>Assets\Nature\53.jpg</PackagePath>
+      <Modified>2016-06-22T15:46:05.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\54.jpg">
+      <PackagePath>Assets\Nature\54.jpg</PackagePath>
+      <Modified>2016-06-22T15:46:55.680</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\55.jpg">
+      <PackagePath>Assets\Nature\55.jpg</PackagePath>
+      <Modified>2016-06-22T15:47:37.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\56.jpg">
+      <PackagePath>Assets\Nature\56.jpg</PackagePath>
+      <Modified>2016-06-28T13:22:36.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\6.jpg">
       <PackagePath>Assets\Nature\6.jpg</PackagePath>
@@ -715,11 +751,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-20T18:02:34.538</Modified>
+      <Modified>2016-07-01T09:07:06.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\bin\x86\Debug\Core\MemorijaUniversal.exe">
       <PackagePath>MemorijaUniversal.exe</PackagePath>
-      <Modified>2016-06-20T18:21:45.218</Modified>
+      <Modified>2016-07-01T09:07:08.152</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

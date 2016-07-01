@@ -67,7 +67,7 @@ namespace MemorijaUniversal
                 {
                     Title = "Game over!",
                     MaxWidth = 400,// Required for Mobile!
-                    Content = "Winner is " + Board.Instance.getWinner()
+                    Content = "Winner is " + Board.Instance.getWinner() + "\n" + Board.Instance.getScores()
                 };
                 dialog.PrimaryButtonText = "Start new game";
                 dialog.SecondaryButtonText = "Go back to set up";

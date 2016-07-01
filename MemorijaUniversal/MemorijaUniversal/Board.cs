@@ -135,5 +135,13 @@ namespace MemorijaUniversal
                 if (Score[i] > max) winner = i;
             return winner;
         }
+
+        public String getScores()
+        {
+            String scores = "";
+            for (int i = 0; i < NumberOfPlayers; i++)
+                scores += "Player " + i + ": " + Score[i] + "\n";
+            return scores;
+        }
     }
 }
