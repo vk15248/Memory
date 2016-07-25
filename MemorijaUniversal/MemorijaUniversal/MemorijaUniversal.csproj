@@ -92,6 +92,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Nature\64.jpg" />
     <Content Include="Assets\Nature\69.jpg" />
     <Content Include="Assets\Nature\24.jpg" />
     <Content Include="Assets\Nature\25.jpg" />
@@ -149,7 +150,6 @@
     <Content Include="Assets\Nature\61.jpg" />
     <Content Include="Assets\Nature\62.jpg" />
     <Content Include="Assets\Nature\63.jpg" />
-    <Content Include="Assets\Nature\64.jpg" />
     <Content Include="Assets\Nature\65.jpg" />
     <Content Include="Assets\Nature\66.jpg" />
     <Content Include="Assets\Nature\67.jpg" />

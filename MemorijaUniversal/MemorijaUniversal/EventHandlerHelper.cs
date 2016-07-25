@@ -22,34 +22,22 @@ namespace MemorijaUniversal
             int k = 0;
             for (int i = 0; i < Board.Instance.NumberOfCards; i++)
             {
-                if (!Board.Instance.Cards[i].Isout)
-                {
-                    CardControl cardControl = new CardControl();
-                    cardControl.CardValue = Board.Instance.Cards[i];
-                    cardControl.Margin = new Thickness(2, 2, 2, 2);
-                    cardControl.Height = (Height / (cols+1)) -2;
-                    cardControl.Width = (Width / cols) -2;
-                    Windows.UI.Xaml.Controls.Grid.SetColumn(cardControl, j);
-                    Windows.UI.Xaml.Controls.Grid.SetRow(cardControl, k);
 
-                    if (j == cols-1)
-                    {
-                        j = 0; k++; 
-                    }
-                    else
-                       j++;
-                    BoardGrid.Children.Add(cardControl);
+                CardControl cardControl = new CardControl();
+                cardControl.CardValue = Board.Instance.Cards[i];
+                cardControl.Margin = new Thickness(2, 2, 2, 2);
+                cardControl.Height = (Height / (cols+1)) -2;
+                cardControl.Width = (Width / cols) -2;
+                cardControl.Visibility = cardControl.CardValue.Isout ? Visibility.Collapsed : Visibility.Visible;
+                Windows.UI.Xaml.Controls.Grid.SetColumn(cardControl, j);
+                Windows.UI.Xaml.Controls.Grid.SetRow(cardControl, k);
+
+                if (j == cols - 1) {
+                    j = 0; k++;
                 }
                 else
-                {
-
-                    if (j == cols - 1)
-                    {
-                        j = 0; k++;
-                    }
-                    else
-                        j++;
-                }
+                    j++;
+                    BoardGrid.Children.Add(cardControl);
                 if(PlayerName!=null)
                     PlayerName.Text = Board.Instance.CurrentPlayerText;
                 if (PlayerScore != null)

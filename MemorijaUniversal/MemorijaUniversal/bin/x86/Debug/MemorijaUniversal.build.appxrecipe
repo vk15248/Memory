@@ -348,6 +348,12 @@
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\64.jpg">
+      <PackagePath>Assets\Nature\64.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\69.jpg">
+      <PackagePath>Assets\Nature\69.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\24.jpg">
       <PackagePath>Assets\Nature\24.jpg</PackagePath>
     </AppxPackagedFile>
@@ -504,8 +510,41 @@
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\6.jpg">
       <PackagePath>Assets\Nature\6.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\60.jpg">
+      <PackagePath>Assets\Nature\60.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\61.jpg">
+      <PackagePath>Assets\Nature\61.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\62.jpg">
+      <PackagePath>Assets\Nature\62.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\63.jpg">
+      <PackagePath>Assets\Nature\63.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\65.jpg">
+      <PackagePath>Assets\Nature\65.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\66.jpg">
+      <PackagePath>Assets\Nature\66.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\67.jpg">
+      <PackagePath>Assets\Nature\67.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\68.jpg">
+      <PackagePath>Assets\Nature\68.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\7.jpg">
       <PackagePath>Assets\Nature\7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\70.jpg">
+      <PackagePath>Assets\Nature\70.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\71.jpg">
+      <PackagePath>Assets\Nature\71.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\72.jpg">
+      <PackagePath>Assets\Nature\72.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="X:\Projekat-test\Memory\MemorijaUniversal\MemorijaUniversal\Assets\Nature\8.jpg">
       <PackagePath>Assets\Nature\8.jpg</PackagePath>

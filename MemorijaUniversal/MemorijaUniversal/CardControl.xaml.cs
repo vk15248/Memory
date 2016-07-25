@@ -42,9 +42,12 @@ namespace MemorijaUniversal
 
         private void RevealCard(object sender, RoutedEventArgs e)
         {
-            buttonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/" + Board.Instance.Theme + "/" + CardValue.Number.ToString() + ".jpg"));
-            if (Board.Instance.playMove(CardValue))
-                EventHandlerHelper.displayBoard(Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards)), (Grid)this.Parent);
+            if (!CardValue.Isout)
+            { 
+                buttonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/" + Board.Instance.Theme + "/" + CardValue.Number.ToString() + ".jpg"));
+                if (Board.Instance.playMove(CardValue))
+                    EventHandlerHelper.displayBoard(Convert.ToInt32(Math.Sqrt(Board.Instance.NumberOfCards)), (Grid)this.Parent);
+            }
         }
     }
 }
